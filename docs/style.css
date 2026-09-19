@@ -73,6 +73,13 @@ h1 {
   margin: 0.5rem 0 1rem;
 }
 
+.effective {
+  margin: -0.5rem 0 1.25rem;
+  font-size: 0.9375rem;
+  color: #55575e;
+  color: light-dark(#55575e, #a9abb2);
+}
+
 h2 {
   font-size: 1.1875rem;
   line-height: 1.4;
