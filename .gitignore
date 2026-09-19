@@ -1,0 +1,29 @@
+# 비밀값 — 절대 커밋하지 않는다
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# 실행 산출물
+data/
+backup/
+pgdata/
+media/
+*.log
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# AI 도구 설정파일 — 공개 레포에 넣지 않는다
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+.claude/
+.codex/
+.cursor/
+.cursorrules
+.windsurfrules
+.clinerules
+.github/copilot-instructions.md
