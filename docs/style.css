@@ -1,0 +1,167 @@
+/* 공용 스타일 — 시스템 글꼴만 쓴다. 외부 글꼴·CDN 없음. */
+:root {
+  color-scheme: light dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  color: #1b1c20;
+  color: light-dark(#1b1c20, #e6e7ea);
+  background: #ffffff;
+  background: light-dark(#ffffff, #16171a);
+}
+
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+a {
+  color: #0b57a4;
+  color: light-dark(#0b57a4, #8cbcf2);
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* 머리 */
+.site-header {
+  border-bottom: 1px solid #d9dbe0;
+  border-bottom: 1px solid light-dark(#d9dbe0, #34363c);
+  padding: 1rem 0;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.tagline {
+  margin: 0.125rem 0 0;
+  font-size: 0.9375rem;
+  color: #55575e;
+  color: light-dark(#55575e, #a9abb2);
+}
+
+/* 본문 */
+main {
+  padding: 1.5rem 0 2.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem;
+}
+
+h2 {
+  font-size: 1.1875rem;
+  line-height: 1.4;
+  margin: 2rem 0 0.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 1.25rem 0 0.25rem;
+}
+
+p,
+ul,
+ol {
+  margin: 0.5rem 0;
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+}
+
+li + li {
+  margin-top: 0.375rem;
+}
+
+code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  padding: 0.05em 0.3em;
+  border-radius: 4px;
+  background: #f1f2f4;
+  background: light-dark(#f1f2f4, #25272c);
+  overflow-wrap: anywhere;
+}
+
+.note {
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #0b57a4;
+  border-left: 4px solid light-dark(#0b57a4, #8cbcf2);
+  background: #f4f6f9;
+  background: light-dark(#f4f6f9, #1f2126);
+}
+
+.placeholder {
+  font-style: normal;
+  padding: 0 0.25em;
+  border: 1px dashed #8a8d95;
+}
+
+/* 영문 요약 */
+.summary-en {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #d9dbe0;
+  border-top: 1px solid light-dark(#d9dbe0, #34363c);
+  font-size: 0.9375rem;
+  word-break: normal;
+}
+
+/* 꼬리 */
+.site-footer {
+  border-top: 1px solid #d9dbe0;
+  border-top: 1px solid light-dark(#d9dbe0, #34363c);
+  padding: 1.25rem 0 2rem;
+  font-size: 0.9375rem;
+  color: #55575e;
+  color: light-dark(#55575e, #a9abb2);
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+
+.site-footer li + li {
+  margin-top: 0;
+}
+
+.site-footer a[aria-current="page"] {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-footer p {
+  margin: 0;
+}

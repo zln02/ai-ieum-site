@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-이음 : 트렌드와 지역자산을 잇는 순환형 지역홍보 시스템</title>
+  <meta name="description" content="광주·전남·전북·제주 지역 홍보용 숏폼 영상의 기획을 돕는 시스템 AI-이음의 소개와 YouTube Data API 사용처">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">AI-이음</a>
+      <p class="tagline">트렌드와 지역자산을 잇는 순환형 지역홍보 시스템</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>AI-이음 : 트렌드와 지역자산을 잇는 순환형 지역홍보 시스템</h1>
+
+    <p>AI-이음은 국립광주과학관 주관 「2026 마이AI랩 AI-이음 프로젝트」의 수행 과제입니다(2026년 9월 선정).</p>
+
+    <h2>하는 일</h2>
+    <p>광주·전남·전북·제주 지역 홍보용 숏폼 영상의 <strong>기획을 돕는</strong> 시스템입니다.
+      온라인 관심 신호(트렌드)와 공공 지역자산 데이터(한국관광공사 TourAPI 등)를 결합해 기획안을 만들고,
+      <strong>사람이 세 단계에서 승인</strong>합니다.</p>
+
+    <h3>사람이 승인하는 세 단계</h3>
+    <ol>
+      <li><strong>G1</strong> · 조합 적합성</li>
+      <li><strong>G2</strong> · 콘텐츠 — 사실성 · 저작권 · AI 생성 표시 · 자막</li>
+      <li><strong>G3</strong> · 게시 승인</li>
+    </ol>
+    <p class="note">자막이 없는 영상은 승인되지 않습니다.</p>
+
+    <h3>성과 회수</h3>
+    <p>게시 뒤 성과는 “어떤 트렌드 × 어떤 지역자산 조합이 상대적으로 통했는가”로 회수해 다음 기획에 반영합니다.
+      조회수를 AI 성능 지표로 쓰지 않습니다.</p>
+
+    <h2>YouTube Data API 사용처</h2>
+    <p>이 시스템은 YouTube Data API를 다음 세 가지에만 씁니다.</p>
+    <ol>
+      <li><code>videos.list</code> (<code>chart=mostPopular</code>, <code>regionCode=KR</code>) —
+        공개 인기 동영상의 <strong>공개 메타데이터</strong>로 트렌드 키워드 후보를 찾습니다.</li>
+      <li><code>videos.insert</code> — 사람 승인(G3)을 거친 숏폼을 <strong>프로젝트 자체 채널</strong>에 올립니다.</li>
+      <li><code>videos.list</code> (<code>part=statistics</code>) —
+        <strong>프로젝트 채널에 올린 영상의 공개 통계</strong>를 조합 단위 상대 비교에 씁니다.</li>
+    </ol>
+    <p>OAuth로 접근하는 계정은 <strong>프로젝트 채널 하나뿐</strong>입니다. 다른 이용자의 비공개 데이터에 접근하지 않습니다.</p>
+
+    <section class="summary-en" lang="en">
+      <h2>Summary (English)</h2>
+      <p><strong>AI-ieum: A Circular Regional Promotion System Connecting Trends and Regional Assets.</strong>
+        AI-ieum is a project carried out under the “2026 My AI Lab AI-ieum Project” organized by the Gwangju National Science Museum (selected in September 2026).</p>
+      <p>It is a system that <strong>helps plan</strong> short-form videos promoting the Gwangju, Jeonnam, Jeonbuk and Jeju regions.
+        It combines online interest signals (trends) with public regional-asset data (such as the Korea Tourism Organization TourAPI) to produce plans,
+        and <strong>people approve them at three stages</strong>: G1 combination fit; G2 content (factual accuracy, copyright, AI-generated labeling, subtitles); G3 publishing approval.
+        Videos without subtitles are not approved.
+        After publishing, performance is collected as “which trend × regional-asset combinations worked relatively better” and fed into the next plan.
+        View counts are not used as an AI performance metric.</p>
+      <p>The system uses the YouTube Data API for these three purposes only:</p>
+      <ol>
+        <li><code>videos.list</code> (<code>chart=mostPopular</code>, <code>regionCode=KR</code>) — finds trend keyword candidates from the public metadata of public popular videos.</li>
+        <li><code>videos.insert</code> — uploads short-form videos that passed human approval (G3) to the project’s own channel.</li>
+        <li><code>videos.list</code> (<code>part=statistics</code>) — uses the public statistics of videos uploaded to the project channel for relative comparison by combination.</li>
+      </ol>
+      <p>The only account accessed through OAuth is the project’s own channel. We do not access other users’ private data.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="사이트 안내">
+        <ul>
+          <li><a href="index.html" aria-current="page">소개 (About)</a></li>
+          <li><a href="privacy.html">개인정보처리방침 (Privacy Policy)</a></li>
+          <li><a href="terms.html">이용약관 (Terms of Service)</a></li>
+        </ul>
+      </nav>
+      <p>AI-이음 · 2026 마이AI랩 AI-이음 프로젝트</p>
+    </div>
+  </footer>
+</body>
+</html>
